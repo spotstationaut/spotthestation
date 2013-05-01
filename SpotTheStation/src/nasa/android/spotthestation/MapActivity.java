@@ -53,7 +53,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapActivity extends FragmentActivity implements CompoundButton.OnCheckedChangeListener
 {
     // Static variables
-    private static final String WUNDERGROUND_API_KEY = "0fb7ca69f56e440c";
+    private static final String WUNDERGROUND_API_KEY = "INSERT_CUSTOM_WUNDERGROUND_KEY";
     private static final String GET_USER_WEATHER_URL = "http://api.wunderground.com/api/" + WUNDERGROUND_API_KEY + "/forecast/q/";
     private static final String MARKER_DOWNLOAD_URL = "http://matai.aut.ac.nz:8080/NASAControlServer/MarkerDownloadServlet";
     private static final String GET_ISS_LOCATION_NOW_URL = "http://api.open-notify.org/iss-now/v1/";

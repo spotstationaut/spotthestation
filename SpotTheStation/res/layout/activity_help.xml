@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="The SpotTheStationAUT app allows you to follow, on the map, and in real time, the International Space Station. You can take pictures of it when you see it and share it with your friends on Twitter, or upload it to the app's server. This will allow anyone using the SpotTheStationAUT app to see your image on their map. You can in turn see other people's shared sightings by turning on or off the 'Image on/off' switch in the top-right corner. You can take a picture and share it by pressing the 'Share ISS Sighting' button in the top-right menu. You can go to either your location or the ISS by pressing one of the 'Find the ISS' or 'Go to Your Location' buttons. Finally, for an enhanced user experience, you can press the 'Use CameraPlus' button to activate the augmented reality camera. This will give you information on the next ISS sighting as well as the direction at which to look for it, all in real time." />
+
+</RelativeLayout>

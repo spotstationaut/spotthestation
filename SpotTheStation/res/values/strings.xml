@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">SpotTheStation</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_camera">Camera</string>
+    <string name="cameraPlusActivity">Camera Plus</string>
+    <string name="title_activity_twitter">Twitter</string>
+    <string name="title_activity_twitter_webview">Twitter</string>
+    <string name="twitter_name">on Twitter</string>
+    <string name="Map">on Map</string>
+    <string name="Share">Share</string>
+    <string name="title_activity_image_view">Image</string>
+    <string name="title_activity_upload_to_nasa_server">Upload To Spot the Station</string>
+    <string name="Upload">Upload</string>
+    <string name="longitude">Longitude:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="capture">Capture</string>
+    <string name="empty"/>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="menu_settings">Settings</string>
+    <string name="helppage">Settings</string>
+</resources>

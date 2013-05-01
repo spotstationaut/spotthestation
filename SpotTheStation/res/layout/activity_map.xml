@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:scrollbars="vertical" />
+
+    <Switch
+        android:id="@+id/markerSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textOn="Show Images"
+        android:textOff="Hide Images"
+        android:onClick="markerSwitchOnSwipe"/>
+
+</RelativeLayout>

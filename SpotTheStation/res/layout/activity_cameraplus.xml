@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/cameraPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <TextView
+        android:id="@+id/latitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/latitude"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/latitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/latitudeLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/latitudeLabel"
+        android:text="@string/longitude"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/longitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latitudeValue"
+        android:layout_toRightOf="@+id/longitudeLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/visbilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/longitudeLabel"
+        android:text="Is ISS Visible: "
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/visbilityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/longitudeLabel"
+        android:layout_toRightOf="@+id/visbilityLabel"
+        android:text="No"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/nextVisbilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/visbilityLabel"
+        android:text="Next ISS Sighting: "
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/nextVisbilityValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/nextVisbilityLabel"
+        android:text="@string/empty"
+        android:textColor="#ffff00" />
+
+    <TextView
+        android:id="@+id/nextVisbilityValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/nextVisbilityValue1"
+        android:text="@string/empty"
+        android:textColor="#ffff00" />
+    <TextView
+        android:id="@+id/nextVisbilityDurationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/nextVisbilityValue2"
+        android:text="Duration:"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/nextVisbilityDurationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/nextVisbilityDurationLabel"
+        android:text="@string/empty"
+        android:textColor="#ffff00" />
+    
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:text="@string/capture" />
+
+</RelativeLayout>

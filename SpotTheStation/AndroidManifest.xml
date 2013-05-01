@@ -58,7 +58,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDinD4C7LumGnSOhoyi4ZsGk-Ni0-HIkro" />
+            android:value="INSERT_CUSTOM_GOOGLE_MAPS_API_KEY" />
 
         <activity
             android:name="nasa.android.spotthestation.CameraActivity"

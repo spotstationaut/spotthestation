@@ -63,8 +63,7 @@ public class MyCompassView extends View
 						    // of our screen orientation and hence we must add 90.
 						    // We take the value modulo 360 to ensure we have no
 						    // angle greater than this number.
-	this.issAzimuth = (float)-Math.toDegrees(issAzimuth);//(float)(Math.toDegrees(issAzimuth)+90)%360;
-//	Log.d("Test3", "issAzimuth: " + this.issAzimuth);
+	this.issAzimuth = (float)-Math.toDegrees(issAzimuth);
 	invalidate();
     }
 }

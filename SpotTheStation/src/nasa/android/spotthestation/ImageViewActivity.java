@@ -57,7 +57,6 @@ public class ImageViewActivity extends Activity {
 
 		@Override
 		protected Bitmap doInBackground(String... params) {
-			Log.d(LOG_TAG, "Start of downloadFromNASA");
 			Bitmap imageBitmap = null;
 			String latitude = params[0];
 			String longitude = params[1];
@@ -68,7 +67,6 @@ public class ImageViewActivity extends Activity {
 				HttpURLConnection connection = (HttpURLConnection) urlObject.openConnection();
 				connection.connect();
 				InputStream input = connection.getInputStream();
-				Log.d(LOG_TAG, "InputStream");
 				BufferedInputStream bis = new BufferedInputStream(input);
 				ByteArrayBuffer baf = new ByteArrayBuffer(MAX_DOWNLOAD_SIZE);
 				int current = 0;
@@ -100,15 +98,11 @@ public class ImageViewActivity extends Activity {
 				e.printStackTrace();
 				Log.d(LOG_TAG, "IOException");
 			}
-			Log.d(LOG_TAG, "Reached end");
-			Log.v(LOG_TAG, "Is image bitmap null? " + imageBitmap);
 			return imageBitmap;
 		}
 
 		@Override
 		protected void onPostExecute(Bitmap photo) {
-			Log.v("Test", "checking before setting bitmap Length = " + photo);
-			Log.v("Test", "is image view null? " + imageView);
 			imageView.setImageBitmap(photo);
 			// Update UI
 			commentTextView.setText(comment);

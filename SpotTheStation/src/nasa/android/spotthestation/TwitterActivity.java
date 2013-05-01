@@ -33,11 +33,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class TwitterActivity extends Activity {
-	private final static String TWITPIC_API_KEY = "dcdf810d2102274d1ada3e5b5b4202af";
+	private final static String TWITPIC_API_KEY = "INSERT_CUSTOM_TWITPIC_API_KEY";
 	private Twitter twitter;
 	private RequestToken requestToken;
-	private String OAUTH_CONSUMER_KEY = "GBaIfLljVqlYqtpBnzfmoA";
-	private String OAUTH_CONSUMER_SECRET = "jfSVD8Z4EKQ7WuQTYR5kfVDfBnkfjXXZEEkJRoQVM8";
+	private String OAUTH_CONSUMER_KEY = "INSERT_CUSTOM_OAUTH_CONSUMER_KEY";
+	private String OAUTH_CONSUMER_SECRET = "INSERT_CUSTOM_OATH_CONSUMER_SECRET";
 	private Context context;
 	private SharedPreferences settings;
 	// Preference Constants

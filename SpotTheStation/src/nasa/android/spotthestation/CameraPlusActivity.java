@@ -216,7 +216,7 @@ public class CameraPlusActivity extends Activity
 	{
 	    if (!mediaStorageDir.mkdirs())
 	    {
-		Log.d(LOG_TAG, "Filed to create directory");
+		Log.d(LOG_TAG, "Failed to create directory");
 		return null;
 	    }
 	}
@@ -488,7 +488,6 @@ public class CameraPlusActivity extends Activity
 //		double L = longitude - issLongitude;
 		double L = issLongitude-longitude;
 		double tan_alpha = Math.sin(Math.toRadians(L)) / (Math.cos(Math.toRadians(latitude)) * Math.tan(Math.toRadians(issLatitude)) - Math.sin(Math.toRadians(latitude)) * Math.cos(Math.toRadians(L)));
-		Log.d("Test4", "tan_alpha = " + tan_alpha);
 		issAzimuth = (float) Math.atan(tan_alpha);
 		
 		// Another method for obtaining azimuth:
@@ -503,8 +502,6 @@ public class CameraPlusActivity extends Activity
 		// Add declination to the magnetic north to obtain true north
 		GeomagneticField gf = new GeomagneticField((float) latitude, (float) longitude, (float) 0, currentTimeMillis);
 		float declination = (float) Math.toRadians(gf.getDeclination());
-		Log.d("Test4", "issAzimuth: "+Math.toDegrees(issAzimuth));
-		Log.d("Test4", "declination: "+gf.getDeclination());
 		issAzimuth += declination;
 	    }
 	    else
@@ -521,7 +518,6 @@ public class CameraPlusActivity extends Activity
 	    {
 		HttpClient httpclientnew = new DefaultHttpClient();
 		String newUri = GET_ISS_LOCATION_AND_PASS_URL + "lat=" + latitude + "&lon=" + longitude + "&alt=100&n=1";
-		Log.d("Test2", newUri);
 		HttpResponse passResponse = httpclientnew.execute(new HttpGet(newUri));
 		StatusLine passStatusLine = passResponse.getStatusLine();
 		if (passStatusLine.getStatusCode() == HttpStatus.SC_OK)
@@ -556,21 +552,16 @@ public class CameraPlusActivity extends Activity
 		    }
 		    visibilityValue2String = "@" + timeText.hour + ":" + minutes + " " + timeText.getCurrentTimezone();
 		    haveViewsChanged = true;
-		    Log.d("Test2", "Fetched new timing: " + timeText.toString());
-		    Log.d("Test2", "month: " + timeText.MONTH);
-		    Log.d("Test2", "timestamp: " + nextPassTimeMillis);
 		}
 	    }
 	    // Check if ISS is currently visible
 	    else if (currentTimeMillis >= nextPassTimeMillis)
 	    {
-		Log.d("Test5", "Checking");
 		if (!isISSVisible)
 		{
 		    isISSVisible = true;
 		    isISSVisibleValue.setTextColor(Color.GREEN);
 		    isISSVisibleValue.setText("Yes");
-		    Log.d("Test5", "It was false");
 		}
 	    }
 	    else
@@ -591,11 +582,8 @@ public class CameraPlusActivity extends Activity
 	{
 	    if (haveViewsChanged)
 	    {
-		Log.d("Test2", "Changing text");
 		nextVisbilityValue1.setText(visibilityValue1String);
 		nextVisbilityValue2.setText(visibilityValue2String);
-		Log.d("Test2", "nextVisbilityValue1: " + nextVisbilityValue1.getText());
-		Log.d("Test2", "nextVisbilityValue2: " + nextVisbilityValue2.getText());
 		nextVisbilityDurationValue.setText(nextPassDurationMillis / 1000 + "s");
 		haveViewsChanged = false;
 	    }
